@@ -1,0 +1,96 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true,
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "standard",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  // "plugins": ["@typescript-eslint", "react", "react-hooks"],
+  "plugins": ["@typescript-eslint", "prettier", "react", "react-hooks"],
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": false,
+        "semi": true,
+        "trailingComma": "all",
+      },
+    ],
+
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/no-namespace": 0,
+    "@typescript-eslint/no-inferrable-types": 0,
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/no-unused-vars": [
+      2,
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": true,
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/array-type": [2, {
+      "default": "array-simple"
+    }],
+
+    "prefer-promise-reject-errors": 1,
+    "no-unused-expressions": 0,
+    "import/export": 0,
+    "standard/computed-property-even-spacing": 0,
+    "standard/no-callback-literal": 1,
+    "promise/param-names": 0,
+
+    "react/jsx-uses-vars": 2,
+    "react/jsx-uses-react": 2,
+    "react-hooks/rules-of-hooks": 2,
+
+    "no-new": 0,
+    "import/first": 0,
+    "comma-dangle": [
+      2,
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline"
+      }
+    ],
+    "quotes": [1, "double", {
+      "allowTemplateLiterals": true
+    }],
+
+    "spaced-comment": 1,
+    "require-atomic-updates": 1,
+    "dot-notation": 1,
+    "no-useless-computed-key": 0,
+    "no-constant-condition": 0,
+    "no-fallthrough": 0,
+    "no-extra-boolean-cast": 0,
+    "no-undef": 0,
+    "no-console": 0
+  }
+}

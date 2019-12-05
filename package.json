@@ -1,0 +1,59 @@
+{
+  "name": "@th/redux-utils",
+  "scopes": [
+    "@th"
+  ],
+  "version": "0.0.1",
+  "description": "",
+  "main": "./_cjs5/index.js",
+  "module": "./_esm5/index.js",
+  "es2015": "./_esm6/index.js",
+  "typings": "./_esm5/index.d.ts",
+  "files": [
+    "dist",
+    "_cjs5",
+    "_esm5",
+    "_esm6",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "npx mocha -r ./test/tsconfigRegister.js ./test/**/*.spec.ts",
+    "lint": "eslint ./src/ --ext .ts,.tsx,.js,.jsx",
+    "test:watch": "npx mocha -r ./test/tsconfigRegister.js ./test/**/*.spec.ts --watch --watch-extensions ts",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm5 && npm run build:esm6",
+    "build:cjs": "tsc -p tsconfig.cjs5.json",
+    "build:esm5": "tsc -p tsconfig.esm5.json",
+    "build:esm6": "tsc -p tsconfig.esm6.json",
+    "clean": "rm -rf ./_cjs5 && rm -rf ./_esm5 && rm -rf ./_esm6",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "author": "Totooria-Hyperion(shr9192@gmail.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.2.6",
+    "@types/mocha": "^5.2.7",
+    "@types/shortid": "0.0.29",
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "immer": "^5.0.0",
+    "mocha": "^6.2.2",
+    "prettier": "^1.19.1",
+    "redux": "^4.0.4",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "shortid": "^2.2.15"
+  }
+}
